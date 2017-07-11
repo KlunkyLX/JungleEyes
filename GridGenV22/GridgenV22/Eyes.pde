@@ -137,7 +137,7 @@ class Eyes {
         adjB = xR[0] - xR[2];
         oppB = yR[2] - yR[0];
         trigValsR(xR[2], yR[2], adjA, oppA, adjB, oppB, 0 - HALF_PI, 0);
-        text("third corner!", xR[2], yR[2] + 5);  // debug - delete
+        //text("third corner!", xR[2], yR[2] + 5);  // debug - delete
       }
     } else {
       float adjA = yL[2] - yL[1];

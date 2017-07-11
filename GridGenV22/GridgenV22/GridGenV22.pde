@@ -13,7 +13,6 @@
 
 // Import libraries
 //--------------------------------------------------------------------------------//
-import processing.pdf.*;
 import java.util.HashSet;
 import java.awt.Rectangle;
 import java.awt.Polygon;
@@ -37,7 +36,6 @@ int bckgrnd = 64;  // colour
 //--------------------------------------------------------------------------------//
 void setup() {
   size(1200, 800);
-  beginRecord(PDF, "sketch.pdf");
   frameRate(4);
   background(bckgrnd);  // *** Refactor!!! ***
   stroke(255, 0, 0);  // *** Refactor!!! ***
@@ -65,7 +63,6 @@ void setup() {
   //println("no eyes: " + eyes.size());  // debug
   //--------------------------------------------------------------------------------//
 
-  endRecord();  // pdf file
   //exit();
 }  // setup enclsng brce
 //--------------------------------------------------------------------------------//
@@ -85,8 +82,8 @@ void draw() {
     noLoop();
     e.blink();
   }
-  
-  endRecord();  // pdf file
+
+  saveFrame("EyesFrame-######.png");
 }  // draw enclsng brce
 //--------------------------------------------------------------------------------//
 //----------------------------------- Draw End -----------------------------------//
